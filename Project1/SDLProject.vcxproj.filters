@@ -27,4 +27,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="cherry1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pear1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="pear2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="player.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

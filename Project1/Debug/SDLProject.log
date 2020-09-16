@@ -1,2 +1,3 @@
 ﻿  main.cpp
-  SDLProject.vcxproj -> C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProject\Project1\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\CSUY-3113\Project1\main.cpp(123,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  SDLProject.vcxproj -> C:\Users\Asma M. Khursheed\CSUY-3113\Project1\Debug\SDLProject.exe

@@ -2,3 +2,5 @@ C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProj
 C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProject\SDLProject\Debug\SDLProject.pdb
 C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProject\Project1\Debug\SDLProject.exe
 C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProject\Project1\Debug\SDLProject.pdb
+C:\Users\Asma M. Khursheed\CSUY-3113\Project1\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\CSUY-3113\Project1\Debug\SDLProject.pdb

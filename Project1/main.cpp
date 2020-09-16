@@ -28,6 +28,9 @@ float player_x = 0;
 float player_rotate = 0;
 float food1_rotate = 0;
 float food2_rotate = 0;
+float food1_scale = 0;
+float food2_scale = 0;
+float dir = 1.0;
 
 GLuint playerTextureID;  
 GLuint food1TextureID;
@@ -56,7 +59,7 @@ GLuint LoadTexture(const char* filePath) {
 
 void Initialize() {
 	SDL_Init(SDL_INIT_VIDEO);
-	displayWindow = SDL_CreateWindow("Hello, World!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
+	displayWindow = SDL_CreateWindow("Project1!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
 	SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
 	SDL_GL_MakeCurrent(displayWindow, context);
 
@@ -85,8 +88,8 @@ void Initialize() {
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	playerTextureID = LoadTexture("player.png");
-	food1TextureID = LoadTexture("apple1.png");
-	food2TextureID = LoadTexture("apple2.png");
+	food1TextureID = LoadTexture("pear1.png");
+	food2TextureID = LoadTexture("pear2.png");
 }
 
 
@@ -104,7 +107,8 @@ void Update() {
 	float ticks = (float)SDL_GetTicks() / 1000.0f;
 	float deltaTime = ticks - lastTicks;
 	lastTicks = ticks;
-	player_x += 1.0f * deltaTime;
+	
+	player_x += dir * deltaTime;
 	food1_rotate += 90.0f * deltaTime;
 	food2_rotate += 90.0f * deltaTime;
 
@@ -112,11 +116,16 @@ void Update() {
 	modelMatrix_player = glm::translate(modelMatrix_player, glm::vec3(player_x, 0.0f, 0.0f));
 
 	modelMatrix_food1 = glm::mat4(1.0f);
-	modelMatrix_food1 = glm::translate(modelMatrix_food1, glm::vec3(1.0f, 1.0f, 0.0f));
+	modelMatrix_food1 = glm::translate(modelMatrix_food1, glm::vec3(1.0f, 2.0f, 0.0f));
+	modelMatrix_food1 = glm::scale(modelMatrix_food1, glm::vec3(0.5f, 0.5f, 1.0f));
 	modelMatrix_food1 = glm::rotate(modelMatrix_food1,glm::radians(food1_rotate), glm::vec3(0.0f, 0.0f, 1.0f));
+	if (player_x > 5.0f || player_x < -5.0f) {
+		dir = dir * (-1.0);
+	}
 
 	modelMatrix_food2 = glm::mat4(1.0f);
-	modelMatrix_food2 = glm::translate(modelMatrix_food2, glm::vec3(-1.0f, 1.0f, 0.0f));
+	modelMatrix_food2 = glm::translate(modelMatrix_food2, glm::vec3(-1.0f, 2.0f, 0.0f));
+	modelMatrix_food2 = glm::scale(modelMatrix_food2, glm::vec3(0.5f, 0.5f, 1.0f));
 	modelMatrix_food2 = glm::rotate(modelMatrix_food2, glm::radians(food2_rotate), glm::vec3(0.0f, 0.0f, 1.0f));
 	 
 }
