@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\Asma M. Khursheed\CSUY-3113\Project2\main.cpp(137,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Asma M. Khursheed\CSUY-3113\Project2\main.cpp(138,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Asma M. Khursheed\CSUY-3113\Project2\main.cpp(149,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  SDLProject.vcxproj -> C:\Users\Asma M. Khursheed\CSUY-3113\Project2\Debug\SDLProject.exe
