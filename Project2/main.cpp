@@ -73,7 +73,7 @@ void Initialize() {
 void ProcessInput() {
 	player1_movement = glm::vec3(0);
 	player2_movement = glm::vec3(0);
-	pong_movement = glm::vec3(0);
+	//pong_movement = glm::vec3(0);
 
 	SDL_Event event;
 	while (SDL_PollEvent(&event)) {
@@ -129,15 +129,17 @@ void pongCollision() {
 	y_1 = player1_position.y;
 	y_2 = player2_position.y;
 
-	player1_xdist = fabs(x_1 - px) - (0.5f);
-	player1_ydist = fabs(y_1 - py) - ((2.5f) / 2.0f);
-	player2_xdist = fabs(x_2 - px) - (0.5f);
-	player2_ydist = fabs(y_2 - py) - ((2.5f) / 2.0f);
+	player1_xdist = fabs(x_1 - px) - (0.55f);
+	player1_ydist = fabs(y_1 - py) - ((2.55f) / 2.0f);
+	player2_xdist = fabs(x_2 - px) - (0.55f);
+	player2_ydist = fabs(y_2 - py) - ((2.55f) / 2.0f);
 	if ((player1_xdist < 0 && player1_ydist < 0) || ( player2_xdist < 0 && player2_ydist < 0)) {
 		x_dir = x_dir * (-1.0);
 		y_dir = y_dir * (-1.0);
-		pong_movement.x = +((0.8f) * (x_dir));
-		pong_movement.y = +((0.8f) * (y_dir));
+		pong_movement.x = 0.2f * x_dir;
+		pong_movement.y = 0.2f * y_dir;
+		pong_position.x += pong_movement.x;
+		pong_position.y += pong_movement.y;
 	}
 
 	if (pong_position.x < -4.75 || pong_position.x > 4.75) {
@@ -147,6 +149,8 @@ void pongCollision() {
 
 	if (pong_position.y > 3.45 || pong_position.y <-3.45) {
 		y_dir = y_dir * (-1.0);
+		pong_movement.y = 0.2f * y_dir;
+		pong_position.y += pong_movement.y;
 	}
 
 }
@@ -178,8 +182,8 @@ void Update() {
 
 	if (startGame) {
 		pongCollision();
-		pong_movement.x = +((0.9f) * (x_dir));
-		pong_movement.y = +((0.9f) * (y_dir));
+		pong_movement.x = +((0.8f) * (x_dir));
+		pong_movement.y = +((0.8f) * (y_dir));
 		
 		pong_position += pong_movement * 2.0f * deltaTime;
 		px = pong_position.x;
