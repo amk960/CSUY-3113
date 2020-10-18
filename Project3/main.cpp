@@ -143,8 +143,8 @@ void Initialize() {
     state.player->speed = 1.0f;
     state.player->textureID = LoadTexture("playerShip2_green.png");
     fontTextureID = LoadTexture("font1.png");
-    state.player->width = 0.95f;
-    state.player->height = 0.95;
+    state.player->width = 0.75f;
+    state.player->height = 0.9;
 
     state.platforms = new Entity[PLATFORM_COUNT];
     GLuint platformTextureID = LoadTexture("platformPack_tile001.png");
@@ -235,14 +235,12 @@ void ProcessInput() {
 
     if (keys[SDL_SCANCODE_LEFT]) {
         if (!missionCompleted && !missionFailed) {
-            state.player->movement.x = -1.0f;
-            state.player->animIndices = state.player->animLeft;
+            state.player->acceleration.x += -0.05f;
         }
     }
     else if (keys[SDL_SCANCODE_RIGHT]) {
         if (!missionCompleted && !missionFailed) {
-            state.player->movement.x = 1.0f;
-            state.player->animIndices = state.player->animRight;
+            state.player->acceleration.x += 0.05f;
         }
     }
 
@@ -271,16 +269,17 @@ void Update() {
     if (state.player->collidedWith != NULL) {
         if ((state.player->collidedWith == &state.platforms[4]) || (state.player->collidedWith == &state.platforms[3])) {
             missionCompleted = true;
-            std::cout << "mission complete" << std::endl;
-            state.player->acceleration = glm::vec3(0, 0.0f, 0);
-            state.player->speed = 0;
+            //std::cout << "mission complete" << std::endl;
+            //state.player->acceleration = glm::vec3(0, 0.0f, 0);
+            //state.player->speed = 0;
         }
         else {
             missionFailed = true;
-            std::cout << "mission failed" << std::endl;
-            state.player->acceleration = glm::vec3(0, 0.0f, 0);
-            state.player->speed = 0;
+            //std::cout << "mission failed" << std::endl;
+            //state.player->acceleration = glm::vec3(0, 0.0f, 0);
+            //state.player->speed = 0;
         }
+        return;
     }
     while (deltaTime >= FIXED_TIMESTEP) {
         // Update. Notice it's FIXED_TIMESTEP. Not deltaTime

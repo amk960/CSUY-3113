@@ -48,12 +48,12 @@ void Entity::CheckCollisionsX(Entity* objects, int objectCount)
             float xdist = fabs(position.x - object->position.x);
             float penetrationX = fabs(xdist - (width / 2.0f) - (object->width / 2.0f));
             if (velocity.x > 0) {
-                position.x -= penetrationX;
+                //position.x -= penetrationX;
                 velocity.x = 0;
                 collidedRight = true;
             }
             else if (velocity.x < 0) {
-                position.x += penetrationX;
+                //position.x += penetrationX;
                 velocity.x = 0;
                 collidedLeft = true;
             }
@@ -63,7 +63,6 @@ void Entity::CheckCollisionsX(Entity* objects, int objectCount)
 
 void Entity::Update(float deltaTime, Entity* platforms, int platformCount)
 {
-
     if (isActive == false) { return; }
     collidedBottom = false;
     collidedTop = false;
@@ -88,10 +87,7 @@ void Entity::Update(float deltaTime, Entity* platforms, int platformCount)
             animIndex = 0;
         }
     }
-    if (jump) {
-        jump = false;
-        velocity.y += jumpPower;
-    }
+
     velocity.x = movement.x * speed;
     velocity += acceleration * deltaTime;
 

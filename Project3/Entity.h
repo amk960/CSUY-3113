@@ -20,8 +20,6 @@ public:
     float speed;
     float width = 1;
     float height = 1;
-    bool jump = false;
-    float jumpPower = 0;
     GLuint textureID;
 
     glm::mat4 modelMatrix;
