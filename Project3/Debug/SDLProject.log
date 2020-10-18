@@ -1,4 +1,6 @@
-﻿main.obj : error LNK2019: unresolved external symbol "public: __thiscall Entity::Entity(void)" (??0Entity@@QAE@XZ) referenced in function "void __cdecl Initialize(void)" (?Initialize@@YAXXZ)
-main.obj : error LNK2019: unresolved external symbol "public: void __thiscall Entity::Update(float)" (?Update@Entity@@QAEXM@Z) referenced in function "void __cdecl Update(void)" (?Update@@YAXXZ)
-main.obj : error LNK2019: unresolved external symbol "public: void __thiscall Entity::Render(class ShaderProgram *)" (?Render@Entity@@QAEXPAVShaderProgram@@@Z) referenced in function "void __cdecl Render(void)" (?Render@@YAXXZ)
-C:\Users\Asma M. Khursheed\CSUY-3113\Project3\Debug\SDLProject.exe : fatal error LNK1120: 3 unresolved externals
+﻿  Entity.cpp
+  main.cpp
+C:\Users\Asma M. Khursheed\CSUY-3113\Project3\main.cpp(47,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Asma M. Khursheed\CSUY-3113\Project3\main.cpp(147,32): warning C4305: '=': truncation from 'double' to 'float'
+  Generating Code...
+  SDLProject.vcxproj -> C:\Users\Asma M. Khursheed\CSUY-3113\Project3\Debug\SDLProject.exe

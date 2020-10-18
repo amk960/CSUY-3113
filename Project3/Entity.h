@@ -37,11 +37,20 @@ public:
     float animTime = 0;
     int animCols = 0;
     int animRows = 0;
-
+    bool isActive = true;
+    bool collidedTop = false;
+    bool collidedBottom = false;
+    bool collidedLeft = false;
+    bool collidedRight = false;
+    Entity* collidedWith = NULL;
     Entity();
 
     bool CheckCollision(Entity* Other);
     void Update(float deltaTime, Entity* platforms, int platformCount);
     void Render(ShaderProgram* program);
     void DrawSpriteFromTextureAtlas(ShaderProgram* program, GLuint textureID, int index);
+    void CheckCollisionsY(Entity* objects, int objectCount);
+    void CheckCollisionsX(Entity* objects, int objectCount);
+
+
 };
