@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\Asma M. Khursheed\CSUY-3113\Project4\main.cpp(50,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Asma M. Khursheed\CSUY-3113\Project4\main.cpp(151,31): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Asma M. Khursheed\CSUY-3113\Project4\main.cpp(351,41): warning C4553: '==': result of expression not used; did you intend '='?
+  SDLProject.vcxproj -> C:\Users\Asma M. Khursheed\CSUY-3113\Project4\Debug\SDLProject.exe
