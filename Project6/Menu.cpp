@@ -32,8 +32,10 @@ void Menu::Render(ShaderProgram* program) {
     //state.map->Render(program);
     Util::DrawText(program, fontTextID, "Welcome to Pathfinder! Press Enter to Start", 0.45f, -0.25f,
         glm::vec3(1.0f, -1.0f, 0));
-    Util::DrawText(program, fontTextID, "Kill all enemies.", 0.45f, -0.25f,
+    Util::DrawText(program, fontTextID, "Avoid all Enemies.", 0.45f, -0.25f,
         glm::vec3(1.0f, -2.0f, 0));
-    Util::DrawText(program, fontTextID, "Find the Door.", 0.45f, -0.25f,
+    Util::DrawText(program, fontTextID, "Collect all Coins.", 0.45f, -0.25f,
         glm::vec3(1.0f, -3.0f, 0));
+    Util::DrawText(program, fontTextID, "Find the Door.", 0.45f, -0.25f,
+        glm::vec3(1.0f, -4.0f, 0));
 }
