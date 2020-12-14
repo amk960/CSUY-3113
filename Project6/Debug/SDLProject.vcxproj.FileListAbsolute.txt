@@ -1,0 +1,10 @@
+C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProject\SDLProject\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\Documents\College\GameProgramming\VisualStudioSDLProject\SDLProject\Debug\SDLProject.pdb
+C:\Users\Asma M. Khursheed\CSUY-3113\Project3\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\CSUY-3113\Project3\Debug\SDLProject.pdb
+C:\Users\Asma M. Khursheed\CSUY-3113\Project4\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\CSUY-3113\Project4\Debug\SDLProject.pdb
+C:\Users\Asma M. Khursheed\CSUY-3113\Project5\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\CSUY-3113\Project5\Debug\SDLProject.pdb
+C:\Users\Asma M. Khursheed\CSUY-3113\Project6\Debug\SDLProject.exe
+C:\Users\Asma M. Khursheed\CSUY-3113\Project6\Debug\SDLProject.pdb
